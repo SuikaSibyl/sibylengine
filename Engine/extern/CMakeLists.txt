@@ -1,0 +1,11 @@
+add_subdirectory("glfw")
+add_subdirectory("imgui")
+add_subdirectory("imnodes")
+add_subdirectory("yaml")
+add_subdirectory("tinyexr")
+add_subdirectory("spvreflect")
+add_subdirectory("tinymitsuba")
+
+set(LIBDEFLATE_BUILD_STATIC_LIB ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+add_subdirectory("libdeflate")

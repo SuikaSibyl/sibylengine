@@ -1,0 +1,7 @@
+**/*.so
+**/*.dll
+build/*
+sibylengine/__pycache__/*
+sibylengine.egg-info/*
+!sibylengine/**/*.so
+!sibylengine/**/*.dll

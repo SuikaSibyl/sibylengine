@@ -1,0 +1,79 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 19
+    },
+  "configurePresets": [
+    {
+      "name": "release-vs22",
+      "displayName": "release-win",
+      "generator": "Visual Studio 17 2022",
+      "description": "Use arbitrary Python path",
+      "binaryDir": "${sourceDir}/Binaries/${presetName}",
+      "cacheVariables": {
+        "Python_EXECUTABLE": "REPLACE_WITH_WINDOWS_PATH_TO_PYTHON\\Anaconda\\envs\\sibyl\\python.exe",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_GENERATOR_PLATFORM": "x64"
+      }
+    },
+    {
+      "name": "debug-win",
+      "displayName": "debug-vs22",
+      "generator": "Visual Studio 17 2022",
+      "description": "Use arbitrary Python path",
+      "binaryDir": "${sourceDir}/Binaries/${presetName}",
+      "cacheVariables": {
+        "Python_EXECUTABLE": "REPLACE_WITH_WINDOWS_PATH_TO_PYTHON\\Anaconda\\envs\\sibyl\\python.exe",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_GENERATOR_PLATFORM": "x64"
+      }
+    },
+    {
+      "name": "release-msvc",
+      "displayName": "release-msvc",
+      "generator": "Ninja",
+      "description": "Use arbitrary Python path",
+      "binaryDir": "${sourceDir}/Binaries/${presetName}",
+      "cacheVariables": {
+        "Python_EXECUTABLE": "REPLACE_WITH_WINDOWS_PATH_TO_PYTHON\\Anaconda\\envs\\sibyl\\python.exe",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS": "/Zm300"
+      }
+    },
+    {
+      "name": "debug-msvc",
+      "displayName": "debug-msvc",
+      "generator": "Ninja",
+      "description": "Use arbitrary Python path",
+      "binaryDir": "${sourceDir}/Binaries/${presetName}",
+      "cacheVariables": {
+        "Python_EXECUTABLE": "REPLACE_WITH_WINDOWS_PATH_TO_PYTHON\\Anaconda\\envs\\sibyl\\python.exe",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS": "/Zm300"
+      }
+    },
+    {
+      "name": "release-linux",
+      "displayName": "release-linux",
+      "generator": "Ninja",
+      "description": "Use arbitrary Python path",
+      "binaryDir": "${sourceDir}/Binaries/${presetName}",
+      "cacheVariables": {
+        "Python_EXECUTABLE": "/REPLACE_WITH_LINUX_PATH_TO_PYTHON/anaconda3/envs/sibyl/bin/python",
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "debug-linux",
+      "displayName": "debug-linux",
+      "generator": "Ninja",
+      "description": "Use arbitrary Python path",
+      "binaryDir": "${sourceDir}/Binaries/${presetName}",
+      "cacheVariables": {
+        "Python_EXECUTABLE": "/REPLACE_WITH_LINUX_PATH_TO_PYTHON/anaconda3/envs/sibyl/bin/python",
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    }
+  ]
+}
